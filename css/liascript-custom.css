@@ -1,24 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;600&display=swap'); 
 
-:root, html, body {
-  font-family: "Lexend Deca", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif !important;
+/* 1) Define a reusable variable for your text font, with robust fallbacks */
+:root {
+  --text-font: "Lexend Deca", system-ui, -apple-system, "Segoe UI", Roboto, Arial,
+               "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Segoe UI Symbol",
+               sans-serif;
 }
 
-/* Ensure common UI/text elements inherit the body font */
+/* 2) Apply to document text, not to all containers */
+html, body {
+  font-family: var(--text-font) !important;
+}
+
+/* 3) Ensure typical text elements inherit body font */
 h1, h2, h3, h4, h5, h6,
 p, li, blockquote,
-button, input, select, textarea,
-table, th, td, caption {
+table, th, td, caption,
+dl, dt, dd, figcaption,
+label, summary, details {
   font-family: inherit !important;
 }
 
-/* LiaScript and many renderers wrap content; these catches help if a container sets a different font */
-#content, .content, .lia, .markdown-body, .container, main, article, section {
+/* 4) Do NOT override icon fonts or SVGs.
+   Add/adjust selectors as needed once you inspect the page. */
+[class*="icon"],
+i[class], /* common for icon fonts */
+.fa, .fas, .far, .fal, .fab,            /* Font Awesome (various styles) */
+.material-icons, .material-symbols-outlined, .material-symbols-rounded, .material-symbols-sharp,
+.octicon,                                /* GitHub/Octicons */
+.lia-icon,                               /* LiaScript-specific (if present) */
+[role="img"],                            /* many icon components set role=img */
+svg, svg * {
+  font-family: unset !important;         /* allow their own font */
+  font-style: normal;                    /* avoids italic fallback issues for icon fonts */
+}
+
+/* 5) Buttons: only style *textual* buttons; don't stomp icon-only controls */
+button:not([class*="icon"]):not(.icon):not([aria-label]),
+input, select, textarea {
   font-family: inherit !important;
 }
 
-/* Preserve monospace for code-related elements */
+/* 6) Preserve monospace for code-related elements */
 code, pre, kbd, samp {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono",
+               monospace !important;
 }
-
