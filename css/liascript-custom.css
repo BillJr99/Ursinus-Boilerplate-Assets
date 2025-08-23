@@ -8,7 +8,7 @@
 }
 
 /* 2) Apply to document text, not to all containers */
-html, body {
+body {
   font-family: var(--text-font) !important;
 }
 
