@@ -6,9 +6,15 @@ body {
   font-family: 'Lexend Deca', sans-serif !important;
 }
 
+/* Apply Lexend Deca to all headers */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lexend Deca', sans-serif !important;
+}
+
 /* Preserve monospace for code blocks */
 code, pre, kbd, samp {
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
 }
+
 
 
