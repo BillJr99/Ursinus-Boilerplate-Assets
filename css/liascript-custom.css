@@ -3,11 +3,12 @@
 
 /* Apply Lexend Deca as the default text font */
 body {
-  font-family: 'Lexend Deca', system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-family: 'Lexend Deca', sans-serif !important;
 }
 
 /* Preserve monospace for code blocks */
 code, pre, kbd, samp {
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
 }
+
 
