@@ -23,5 +23,3 @@ table, th, td, caption {
 code, pre, kbd, samp {
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace !important;
 }
-
-body, body *:not(code):not(pre):not(kbd):not(samp) { font-family: "Lexend Deca", sans-serif !important; }
