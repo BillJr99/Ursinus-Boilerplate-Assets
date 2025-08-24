@@ -6,8 +6,9 @@ body {
   font-family: 'Lexend Deca', sans-serif !important;
 }
 
-/* Apply Lexend Deca to all headers */
-h1, h2, h3, h4, h5, h6 {
+/* Apply Lexend Deca to all headers and Bootstrap heading classes */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: 'Lexend Deca', sans-serif !important;
 }
 
@@ -15,6 +16,7 @@ h1, h2, h3, h4, h5, h6 {
 code, pre, kbd, samp {
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
 }
+
 
 
 
